@@ -1,0 +1,82 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../assets/images/grass-pattern.jpg');
+    background-repeat: repeat;
+}
+
+header {
+    background-image: url('../assets/images/wood-texture.jpg');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 850px;
+}
+
+div.logotype-and-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.logotype {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.logo-container {
+    height: 5rem;
+    width: 10rem;
+}
+
+img.logo {
+    height: 100%;
+    width: auto;
+    filter: url(#white-inner-shadow);
+    display: block;
+    -webkit-user-drag: none;
+}
+ 
+header > div.logo-container:last-child {
+    transform: scaleX(-1);
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+button.nav-button {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    width: 12rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+button.nav-button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+button.nav-button.active {
+    outline: 5px solid rgb(255, 255, 255);
+}

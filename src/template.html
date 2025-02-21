@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurus</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container"><img class="logo" src="assets/images/bull.png"></div>
+        <div class="logotype-and-nav">
+            <div class="logotype">Restaurus</div>   
+            <nav>
+                <button class="nav-button" id="home">Home</button>
+                <button class="nav-button" id="menu">Menu</button>
+                <button class="nav-button" id="contact">Contact</button>
+            </nav>
+        </div>
+        <div class="logo-container"><img class="logo" src="assets/images/bull.png"></div>
+    </header>
+
+    <div id="content">
+    </div>
+
+    <svg width="0" height="0" style="position:absolute;">
+        <filter id="white-inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
+          <!-- Step 1: Create a white shape using the PNG's alpha -->
+          <feFlood flood-color="rgba(0, 0, 0, 0.5)" result="whiteFill" />
+          <feComposite in="whiteFill" in2="SourceAlpha" operator="in" result="whiteShape" />
+      
+          <!-- Step 2: Create the inner shadow by blurring the alpha -->
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blurred" />
+          <!-- Use arithmetic composite to subtract the blurred alpha from the original shape -->
+          <feComposite in="blurred" in2="SourceAlpha" operator="arithmetic"
+                       k2="-1" k3="1" result="innerShadow" />
+      
+          <!-- Step 3: Composite the white shape with the inner shadow -->
+          <feComposite in="whiteShape" in2="innerShadow" operator="over" />
+        </filter>
+      </svg>
+      
+      
+      
+</body>
+</html>
